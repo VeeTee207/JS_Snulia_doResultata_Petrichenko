@@ -1,0 +1,8 @@
+The page is to display some basic monthly expenceses.
+1. Botton "начать расчет " will lead to fill up the wrignt side -- доход, датаю
+2. "Введите обязательные расходы " and "Утвердить" botton --> "Обязательные расходы:" on the wright table.
+3."Введите необязательные расходы" --> "Утвердить" botton. 
+4. "Расчет дневного бюджета " --> "Рассчитать" botton.
+5. Введите статьи возможного дохода через запятую 
+6. Check the "Есть ли накопления: " and enter the data of sum/percent.
+
