@@ -1,0 +1,1 @@
+Here, in asnmt 9, are a html page with horisontal menu bar. Originally, all data was on the page. And throught JS event delegation only single click on the top of horisonatal menu allows to show the text/picture data associated to the tab-menu. So, the only one click of the tab displays one text and one picture.  
