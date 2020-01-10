@@ -32,13 +32,12 @@ window.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
-
     });
 
     // Timer  . The setting poit of deadline deadLine variable
     // It displays how many hours , minutes, seconds left until the dead line
 
-    let deadLine = '2020-01-25 01:00';   
+    let deadLine = '2020-01-25 01:00';
 
     function getTimeRemaining(endTime) {
         let t = Date.parse(endTime) - Date.parse(new Date()),
@@ -46,24 +45,23 @@ window.addEventListener('DOMContentLoaded', function() {
         minutes = Math.floor(((t/1000)/60)%60) ,
         hours = Math.floor(((t/1000)/60)/60) ;
         // temp = Math.floor((10000/1000)%60) ;
-        // let time = new Date().getTime(); 
-
+        // let time = new Date().getTime();
         return {
             'total': t,
             'hours': hours,
             'minutes': minutes,
             'seconds': seconds
          } ;
-    } 
+    }
 
 
     function setClock(id, endTime) {
-        let timer = document.getElementById(id), 
+        let timer = document.getElementById(id),
         hours = document.querySelector(".hours"),
         minutes = document.querySelector(".minutes") ,
         seconds = document.querySelector('.seconds') ,
         timeInterval = setInterval(updateClock, 1000) ;
-    
+
         function updateClock() {
             let t = getTimeRemaining(endTime);
                 hours.textContent = t.hours;
@@ -76,8 +74,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 seconds.textContent = '00';
 
             }
-        }   
+        }
     }
     setClock('time', deadLine) ;
 });
-
