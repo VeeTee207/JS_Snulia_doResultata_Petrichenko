@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function() {
     // Timer  . The setting poit of deadline deadLine variable
     // It displays how many hours , minutes, seconds left until the dead line
 
-    let deadLine = '2020-01-25 01:00';
+    let deadLine = '2020-05-25 01:00';
 
     function getTimeRemaining(endTime) {
         let t = Date.parse(endTime) - Date.parse(new Date()),
@@ -77,4 +77,54 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
     setClock('time', deadLine) ;
+
+    // Modal window
+    let more = document.querySelector('.more'),     // bottn id = more
+        overlay = document.querySelector('.overlay'),  // windows itself
+        close = document.querySelector('.popup-close');  // close sign
+
+    more.addEventListener ('click', function() {
+        overlay.style.display = 'block' ;  // open block - model
+        this.classList.add('more-splash') ;     // add animation more splash  
+        document.body.style.overflow = 'hidden' ;  // froze the backatage  
+    }) ;
+
+    close.addEventListener ('click', function() {
+        overlay.style.display = 'none' ;  // close block - model
+        more.classList.remove('more-splash') ;     // add animation more splash  
+        document.body.style.overflow = '' ;  // activate 
+    }) ;
+
+
+     // modal - Узнать подробнее
+     let moreDetails = document.querySelector('.description-btn'),     // bottn id = more
+     overlayDetails = document.querySelector('.overlay'),  // windows itself
+    closeDetails = document.querySelector('.popup-close');
+    
+    console.log(moreDetails) ;
+    moreDetails.addEventListener('click', function() {
+        overlayDetails.style.display = 'block' ;
+        this.classList.add('more-splash') ;
+        document.body.style.overflow = 'hidden';
+        console.log(moreDetails) ;
+    }) ;
+
+    closeDetails.addEventListener('click', function() {
+        overlayDetails.style.display = 'none' ;
+        this.classList.remove('more-splash') ;
+        document.body.style.overflow = '';
+    }) ;
+    
+// let age = document.getElementById('age');
+// // console.log(this.age) ;
+
+// function showUser(surname, name) {
+//     alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
+// }
+// showUser.apply(age,['Vovkin', 'vova']);
+
+
+
+
+
 });
